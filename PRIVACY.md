@@ -1,14 +1,14 @@
 # Confidentialité
 
-Horizon Wallpaper ne collecte rien sur vous. Il n'y a ni compte, ni publicité, ni statistiques d'utilisation. Tout ce que fait l'application reste sur votre PC, à l'exception des quelques connexions listées plus bas, qui ont toutes une raison précise.
+HZW Manager ne collecte rien sur vous. Il n'y a ni compte, ni publicité, ni statistiques d'utilisation. Tout ce que fait l'application reste sur votre PC, à l'exception des quelques connexions listées plus bas, qui ont toutes une raison précise.
 
 ## Ce qui est enregistré sur votre PC
 
-Tout se trouve dans `%APPDATA%\Horizon Wallpaper\` :
+Tout se trouve dans `%APPDATA%\HZW Manager\` :
 
 | Fichier | Contenu |
 | --- | --- |
-| `config.json` | Vos réglages, vos ambiances et la liste de vos fonds (avec le chemin de vos fichiers). Contient aussi votre clé Pixabay, si vous en avez ajouté une, **chiffrée avec le coffre de Windows** : seule votre session Windows peut la relire. |
+| `config.json` | Vos réglages, vos ambiances et la liste de vos fonds (avec le chemin de vos fichiers). Contient aussi vos clés Pixabay et Unsplash, si vous en avez ajouté, **chiffrées avec le coffre de Windows** : seule votre session Windows peut la relire. |
 | `library\` | Les fonds que vous avez téléchargés depuis l'onglet Explorer. |
 | `horizon.log` | Les erreurs techniques, pour aider à corriger un problème (256 Ko au maximum). Il ne contient ni vos recherches ni ce que vous écoutez. |
 
@@ -24,6 +24,12 @@ Celles qui concernent le son et la musique sont **désactivées par défaut**.
 
 **Parallaxe à la souris.** La position de votre curseur est lue sur votre PC pour faire bouger le fond. Elle ne sort pas de l'application.
 
+**Météo et ville.** L'application ne devine jamais où vous êtes : c'est vous qui choisissez une ville. Ses coordonnées sont enregistrées dans `config.json` et servent à afficher la météo et à placer le soleil à la bonne heure.
+
+**Raccourcis clavier.** L'application ne lit pas votre clavier. Elle déclare ses combinaisons à Windows, qui la prévient uniquement quand l'une d'elles est tapée. Les contrôles musique envoient les touches multimédia standard (précédent, lecture, suivant).
+
+**Widget Système.** L'utilisation du processeur, de la mémoire, du disque et de la batterie est lue sur votre PC, toutes les 2 secondes, seulement quand le widget est affiché. Rien n'est enregistré ni envoyé. Le texte du widget Note est stocké dans `config.json`.
+
 **Pause en plein écran.** L'application vérifie si la fenêtre au premier plan recouvre l'écran, à partir de sa taille et de son type. Elle ne lit ni son titre ni son contenu.
 
 ## Les connexions à internet
@@ -36,17 +42,22 @@ L'application ne se connecte qu'à ces services. Chacun voit votre adresse IP, c
 | **Wallhaven** | Quand vous cherchez des fonds fixes dans Explorer | Votre recherche |
 | **Wikimedia Commons** | Quand vous cherchez des fonds animés sans clé Pixabay | Votre recherche |
 | **Pixabay** | Quand vous cherchez des fonds animés avec votre clé | Votre recherche et votre clé |
-| `w.wallhaven.cc`, `upload.wikimedia.org`, `cdn.pixabay.com` | Quand vous cliquez sur « Ajouter » | Le téléchargement du fond choisi |
+| **Unsplash** | Quand vous cherchez des photos avec votre clé, et quand vous en ajoutez une (Unsplash le demande pour créditer le photographe) | Votre recherche et votre clé |
+| **Pinterest** (service d'intégration officiel) | Quand vous ajoutez une épingle | Le numéro de l'épingle |
+| **Le site d'un lien collé** | Quand vous ajoutez un fond depuis un lien | La demande du fichier, comme le ferait un navigateur |
+| **Open-Meteo** (recherche de ville) | Quand vous cherchez une ville dans les réglages | Le nom tapé |
+| **Open-Meteo** (météo) | Toutes les 20 minutes, seulement si une ville est choisie | Les coordonnées de la ville choisie |
+| `w.wallhaven.cc`, `upload.wikimedia.org`, `cdn.pixabay.com`, `images.unsplash.com` | Quand vous cliquez sur « Ajouter » | Le téléchargement du fond choisi |
 
-Les miniatures de l'onglet Explorer sont chargées depuis ces mêmes services. Les requêtes portent un identifiant générique (`HorizonWallpaper/1.0`), sans aucune information sur vous.
+Les miniatures de l'onglet Explorer sont chargées depuis ces mêmes services. Les requêtes portent un identifiant générique (`HZWManager/1.0`), sans aucune information sur vous.
 
 ## Tout effacer
 
-1. Désinstallez Horizon Wallpaper (Paramètres Windows › Applications).
-2. Supprimez le dossier `%APPDATA%\Horizon Wallpaper\`.
+1. Désinstallez HZW Manager (Paramètres Windows › Applications).
+2. Supprimez le dossier `%APPDATA%\HZW Manager\`.
 
 Il ne reste alors plus aucune trace de l'application.
 
 ## Une question ?
 
-Ouvrez une discussion sur [le dépôt des versions](https://github.com/Atlantic669/horizon-wallpaper-releases/issues).
+Ouvrez une discussion sur [le dépôt des versions](https://github.com/Atlantic669/hzw-manager-releases/issues).
