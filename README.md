@@ -1,6 +1,8 @@
-# HZW Manager — Horizon Windows Manager
+# HZW Manager (Horizon Windows Manager)
 
-Fonds d'écran animés et barre des tâches personnalisée pour Windows, légers et élégants, par **HorizonStudio**.
+Fonds d'écran animés et barre des tâches personnalisée pour Windows, légers et élégants.
+
+Propulsé par **Horizon Studio**.
 (Anciennement « Horizon Wallpaper ».)
 
 **[Télécharger la dernière version](https://github.com/Atlantic669/hzw-manager-releases/releases/latest)**, puis lancez `HZW-Manager-Setup-x.y.z.exe`.
